@@ -1,0 +1,13 @@
+def selection_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        key = i #pick one element
+        for j in range(i+1, n): #scan through the elements
+            if arr[j] < arr[key]: # smallest element goes to the right place first
+                key = j
+        arr[i], arr[key] = arr[key], arr[i] #swap
+
+# Example usage:
+arr = [64, 34, 25, 12, 22, 11, 90]
+selection_sort(arr)
+print("Sorted array using Selection Sort:", arr)

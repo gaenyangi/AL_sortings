@@ -1,0 +1,13 @@
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i] #sequentially select an element
+        j = i-1
+        while j >= 0 and key < arr[j]: # and check where the sorted part is less than the selected one
+            arr[j+1] = arr[j] #push bigger element by one
+            j -= 1 # and move the place which the selected will put forward
+        arr[j+1] = key # put the selected one into the right place of sorted part
+
+# Example usage:
+arr = [64, 34, 25, 12, 22, 11, 90]
+insertion_sort(arr)
+print("Sorted array using Insertion Sort:", arr)

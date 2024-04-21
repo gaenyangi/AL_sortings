@@ -22,7 +22,7 @@ def build_max_heap(arr):
     n = len(arr)
     # Build a max heap.
     # Starting from last non-leaf node and heapifying all internal nodes in bottom up manner
-    for i in range(n / 2 - 1, -1, -1):
+    for i in range(n // 2 - 1, -1, -1):
         max_heapify(arr, n, i)
 
 
